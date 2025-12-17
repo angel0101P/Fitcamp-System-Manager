@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="icon" href="images/LogominiFit.png">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tabs">
+            <button class="tab active" onclick="openTab('login')">Login</button>
+            <button class="tab" onclick="openTab('registro')">Registro</button>
+        </div>
+
+        <div id="login" class="form-contenedor active">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <p>¿Aun no tienes una Cuenta? ¡Dale a Registro!</p>
+                <button type="submit">Acceder</button>
+            </form>
+        </div>
+
+        <div id="registro" class="form-contenedor">
+            <h2>Registrarse</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Confirmar contraseña" required>
+                <p>¿Ya tienes una Cuenta? ¡Dale a Login!</p>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/script_style_login.js"></script>
+</body>
+</html>

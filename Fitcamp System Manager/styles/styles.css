@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.contenedor {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 350px;
+    border: 2px solid  purple;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: black;
+    border: 2px solid  purple;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.tab.active {
+    background: purple;
+    border: 2px solid  black;
+    color: white;
+    transform: translateY(-2px); 
+}
+
+
+/*esto es para una pequeña animacion al momento de pasar el cursor*/
+.tab:hover:not(.active) {
+    background: rgba(128, 0, 128, 0.2);
+    border-color: violet;
+    transform: translateY(-1px);
+    color: white;
+}
+
+.form-contenedor {
+    display: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+.form-contenedor.active {
+    display: block;
+    color:white;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    color: white ;
+    background: black;
+    border: 2px solid  white;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color:black;
+    color:white;
+    padding: 10px 15px;
+    border: 2px solid  purple;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+button:hover {
+    background: rgba(128, 0, 128, 0.2);
+    border-color: violet;
+    transform: translateY(-1px);
+    color: white;
+    transition: 0.3s;
+}
