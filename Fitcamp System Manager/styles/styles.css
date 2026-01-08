@@ -1,0 +1,132 @@
+/* Variables para colores */
+:root {
+    --primary-color: #A020F0; /* Morado/Violeta principal */
+    --secondary-color: #7d348b; /* Morado más oscuro/rosa */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --dark-bg: #14051a; /* Fondo muy oscuro, casi negro */
+    --box-bg: rgba(0, 0, 0, 0.5); /* Fondo de la caja de login */
+}
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-image: url(../images/1.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at 75% 50%, var(--secondary-color) 0%, var(--dark-bg) 70%);
+    color: var(--text-light);
+    overflow: hidden; /* Para evitar barras de desplazamiento si la caja es grande */
+}
+.contenedor {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 350px;
+    border: 2px solid  purple;
+    margin-left: 0;
+    margin-right: 200px; 
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: black;
+    border: 2px solid  purple;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.tab.active {
+    background: purple;
+    border: 2px solid  black;
+    color: white;
+    transform: translateY(-2px); 
+}
+
+
+/*esto es para una pequeña animacion al momento de pasar el cursor*/
+.tab:hover:not(.active) {
+    background: rgba(128, 0, 128, 0.2);
+    border-color: violet;
+    transform: translateY(-1px);
+    color: white;
+}
+
+.form-contenedor {
+    display: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+.form-contenedor.active {
+    display: block;
+    color:white;
+}
+
+
+.contenedor-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -150px;
+}
+
+.contenedor-imagen img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(128, 0, 128, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.contenedor-imagen img:hover {
+    transform: scale(1.05);
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    color: white ;
+    background: black;
+    border: 2px solid  white;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color:black;
+    color:white;
+    padding: 10px 15px;
+    border: 2px solid  purple;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+button:hover {
+    background: rgba(128, 0, 128, 0.2);
+    border-color: violet;
+    transform: translateY(-1px);
+    color: white;
+    transition: 0.3s;
+}
